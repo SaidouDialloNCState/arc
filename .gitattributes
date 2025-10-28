@@ -23,3 +23,5 @@ tools/** linguist-vendored
 *.pdf linguist-generated
 plots/** linguist-generated
 report/** linguist-generated
+
+b/** linguist-vendored
