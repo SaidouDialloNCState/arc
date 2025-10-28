@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: rjcalib
+Version: 0.0.1
+Summary: Structure-preserving rough-jump VIX calibration
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+
+# Rough Volatility with Tempered-Stable Jumps — Fast Calibration
+
+Structure-preserving CF pricer + GPU precompute + tiny NN surrogate.
+
+
+### Fast vs Reference
+- **Reference (default):** mpmath + closed-form \(H_\Delta\) for maximal fidelity.
+- **Fast path:** numeric \(H_\Delta\) with CuPy/NumPy via `--use_fast_H` (or env `RJ_USE_FAST_HDELTA=1`).
+  Use fast for calibration sweeps; verify final params with the reference path.
+

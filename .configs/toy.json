@@ -1,0 +1,11 @@
+{
+  "csv": ".data/sample_vix.csv",
+  "I2_t0": 0.1,
+  "z_t0": 0.0,
+  "maxiter_global": 20,
+  "maxiter_local": 50,
+  "use_fast_H": true,
+  "parallel": 4,
+  "out": "calib_result.json",
+  "dump_prices": ".data/sample_vix_modeled.csv"
+}
