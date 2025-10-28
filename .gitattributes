@@ -1,18 +1,25 @@
-# Emphasize Python
-*.py linguist-language=Python
+# Force Python classification for code areas
 src/** linguist-language=Python
-scripts/*.py linguist-language=Python
+scripts/**/*.py linguist-language=Python
+*.py linguist-language=Python
 
-# De-emphasize helper scripts as docs (excluded from %)
-*.sh linguist-documentation
-*.bash linguist-documentation
-*.zsh linguist-documentation
-*.ksh linguist-documentation
-*.pl linguist-documentation
-*.pm linguist-documentation
+# Treat non-Python helpers as vendored (excluded from %)
+**/*.sh linguist-vendored
+**/*.bash linguist-vendored
+**/*.zsh linguist-vendored
+**/*.ksh linguist-vendored
+**/*.pl linguist-vendored
+**/*.pm linguist-vendored
+**/*.SH linguist-vendored
+**/*.PL linguist-vendored
+**/*.PM linguist-vendored
 
-# Generated / binary artifacts (excluded from %)
+# Extensionless shell scripts (detected by path) — mark whole folders vendored
+scripts/** linguist-vendored
+tools/** linguist-vendored
+
+# Generated / binaries
 *.csv linguist-generated
 *.pdf linguist-generated
-plots/* linguist-generated
-report/* linguist-generated
+plots/** linguist-generated
+report/** linguist-generated
