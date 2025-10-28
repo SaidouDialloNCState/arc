@@ -1,0 +1,18 @@
+# Emphasize Python
+*.py linguist-language=Python
+src/** linguist-language=Python
+scripts/*.py linguist-language=Python
+
+# De-emphasize helper scripts as docs (excluded from %)
+*.sh linguist-documentation
+*.bash linguist-documentation
+*.zsh linguist-documentation
+*.ksh linguist-documentation
+*.pl linguist-documentation
+*.pm linguist-documentation
+
+# Generated / binary artifacts (excluded from %)
+*.csv linguist-generated
+*.pdf linguist-generated
+plots/* linguist-generated
+report/* linguist-generated
