@@ -8,3 +8,7 @@ Structure-preserving CF pricer + GPU precompute + tiny NN surrogate.
 - **Fast path:** numeric \(H_\Delta\) with CuPy/NumPy via `--use_fast_H` (or env `RJ_USE_FAST_HDELTA=1`).
   Use fast for calibration sweeps; verify final params with the reference path.
 
+
+## Architecture Diagram
+
+![ARC Architecture](diagrams/arc_abm.png)
